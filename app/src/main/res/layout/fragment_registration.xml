@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context="com.example.lab3.ui.registrationscreen.RegistrationFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/undraw_color_palette_re_dwy7"
+        app:layout_constraintBottom_toTopOf="@id/tvColorMatcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvColorMatcher"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/color_matcher"
+        android:textColor="@color/teal_500"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvGameDescription"
+        app:layout_constraintStart_toStartOf="@id/tvGameDescription" />
+
+    <TextView
+        android:id="@+id/tvGameDescription"
+        style="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/game_description"
+        android:textColor="@color/teal_500_dark"
+        app:layout_constraintBottom_toTopOf="@id/btnLogIn"
+        app:layout_constraintStart_toStartOf="@id/btnLogIn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogIn"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginBottom="16dp"
+        android:elevation="0dp"
+        android:background="@drawable/button_login"
+        android:text="@string/log_in"
+        android:textColor="@drawable/registration_screen_button_login_text_color"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/btnSignUp"
+        app:layout_constraintEnd_toEndOf="@id/btnSignUp"
+        app:layout_constraintStart_toStartOf="@id/btnSignUp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignUp"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginStart="@dimen/margin_start"
+        android:layout_marginEnd="@dimen/margin_end"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:background="@drawable/registration_screen_button_signup"
+        android:text="@string/sign_up"
+        android:textAllCaps="false"
+        android:textColor="@drawable/registration_screen_button_signup_text_color"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

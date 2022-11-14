@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lab3.ui.gamescreen.GameFragment">
+
+
+    <TextView
+        android:id="@+id/tvScore"
+        style="?attr/textAppearanceHeadline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/score"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Score: 10" />
+
+    <TextView
+        android:id="@+id/tvTimer"
+        style="?attr/textAppearanceHeadline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/timer"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="01:00" />
+
+    <!--Change text color to gray-->
+    <TextView
+        android:id="@+id/tvGameInstructions"
+        style="?attr/textAppearanceSubtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/game_instructions"
+        android:textColor="@color/teal_500_dark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvScore" />
+
+    <TextView
+        android:id="@+id/tvAnswerState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/game_screen_text_view_answer_state"
+        android:paddingStart="20dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="4dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/tvGameInstructions"
+        app:layout_constraintStart_toStartOf="@id/tvGameInstructions"
+        app:layout_constraintTop_toBottomOf="@id/tvGameInstructions"
+        tools:text="Incorrect!" />
+
+    <TextView
+        android:id="@+id/tvLeftWord"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/left_word"
+        app:layout_constraintBottom_toTopOf="@id/btnYes"
+        app:layout_constraintEnd_toStartOf="@id/tvRightWord"
+        app:layout_constraintStart_toStartOf="@id/btnYes"
+        app:layout_constraintTop_toBottomOf="@id/tvGameInstructions"
+        tools:text="Red" />
+
+    <TextView
+        android:id="@+id/tvRightWord"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/right_word"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvLeftWord"
+        app:layout_constraintEnd_toEndOf="@id/btnYes"
+        app:layout_constraintStart_toEndOf="@id/tvLeftWord"
+        tools:text="Red" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnYes"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_login"
+        android:text="@string/yes"
+        android:textAllCaps="false"
+        android:textColor="@drawable/registration_screen_button_login_text_color"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/btnNo"
+        app:layout_constraintEnd_toEndOf="@id/btnNo"
+        app:layout_constraintStart_toStartOf="@id/btnNo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNo"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginStart="@dimen/margin_start"
+        android:layout_marginEnd="@dimen/margin_end"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:background="@drawable/registration_screen_button_signup"
+        android:text="@string/no"
+        android:textAllCaps="false"
+        android:textColor="@drawable/registration_screen_button_signup_text_color"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

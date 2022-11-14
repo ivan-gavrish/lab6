@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "553126258333",
+    "project_id": "colormatcher-cea8d",
+    "storage_bucket": "colormatcher-cea8d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553126258333:android:8611141c0f47d740241674",
+        "android_client_info": {
+          "package_name": "com.example.lab3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "553126258333-o089hqh6j5i8j1ckg30lo91tc5vl6cs7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMYZNe4qXu8PfKNeAWExplE6NLKqeuNcw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "553126258333-o089hqh6j5i8j1ckg30lo91tc5vl6cs7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
